@@ -255,8 +255,8 @@ export default (e) => {
           fileReader.onload = function (e) {
             const blob = new Blob([e.target.result], { type: 'audio/mp3' })
             const url = window.URL.createObjectURL(blob)
-            audio = new SpatialAudio(url, app, camera, true)
-            audio.track.play()
+            audio = new SpatialAudio(url, app, camera, false)
+            // audio.track.play()
             console.log(
               "Filename: '" + file.name + "'",
               '(' + Math.floor((file.size / 1024 / 1024) * 100) / 100 + ' MB)'
@@ -465,7 +465,7 @@ export default (e) => {
     if (audio) {
       // spatial audio position
 
-      audioPosition.x = Math.sin(elapsedTime / 1000) * 5
+      audioPosition.x = Math.sin(elapsedTime / 1000) * 4
       audioRotation.y = -Math.sin(elapsedTime / 1000)
       audio.updateAudio({
         position: audioPosition,
