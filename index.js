@@ -279,7 +279,7 @@ export default (e) => {
   document.body.onkeyup = (e) => {
     if (e.code === 'KeyM') {
       if (!audio) {
-        audio = new SpatialAudio(baseUrl + 'tracks/music1.mp3', app, camera)
+        audio = new SpatialAudio(baseUrl + 'tracks/music.mp3', app, camera)
         audioPosition.z -= 2
         audio.updateAudio({
           position: audioPosition,
