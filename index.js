@@ -194,8 +194,8 @@ export default (e) => {
   )
   ground.rotation.x -= Math.PI / 2
   ground.position.y -= 1
-  const groundPhysicsId = physics.addGeometry(ground)
-  physicsIds.push(groundPhysicsId)
+  // const groundPhysicsId = physics.addGeometry(ground)
+  // physicsIds.push(groundPhysicsId)
   const wireframe = new THREE.LineSegments(
     roomWireframeGeometry,
     roomWireframeMaterial
