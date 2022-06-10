@@ -277,7 +277,7 @@ export default (e) => {
   // creating audio with space bar click
 
   document.body.onkeyup = (e) => {
-    if (e.code === 'KeyM') {
+    if (e.code === 'Digit1') {
       if (!audio) {
         audio = new SpatialAudio(baseUrl + 'tracks/music.mp3', app, camera)
         audioPosition.z -= 2
