@@ -279,7 +279,7 @@ export default (e) => {
   document.body.onkeyup = (e) => {
     if (e.code === 'Digit1') {
       if (!audio) {
-        audio = new SpatialAudio(baseUrl + 'tracks/music.mp3', app, camera)
+        audio = new SpatialAudio('https://res.cloudinary.com/musixdevelop/video/upload/track-audios/Sad.mp3', app, camera)
         audioPosition.z -= 2
         audio.updateAudio({
           position: audioPosition,
