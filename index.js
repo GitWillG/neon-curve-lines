@@ -86,7 +86,7 @@ export default (e) => {
 
   new EXRLoader()
     // .setDataType(THREE.UnsignedByteType)
-    .load(baseUrl + '/exr/kloppenheim.exr', function (texture) {
+    .load(baseUrl + 'exr/kloppenheim.exr', function (texture) {
       let t = pmremGenerator.fromEquirectangular(texture).texture
       t.minFilter = THREE.LinearFilter
       // rootScene.background = t
