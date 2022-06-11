@@ -93,7 +93,7 @@ export default (e) => {
       texture.dispose()
     })
 
-  const masterPieceGeometry = new THREE.BoxBufferGeometry(6, 6, 6, 5, 5, 5)
+  const masterPieceGeometry = new THREE.BoxBufferGeometry(1, 1, 1, 1, 1, 1)
   const masterPieceMaterial = new THREE.ShaderMaterial({
     vertexShader: masterPieceParticlesVertex,
     fragmentShader: masterPieceParticlesFragment,
