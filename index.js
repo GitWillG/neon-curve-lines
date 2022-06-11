@@ -93,7 +93,7 @@ export default (e) => {
       texture.dispose()
     })
 
-  const masterPieceGeometry = new THREE.BoxBufferGeometry(1, 1, 1, 1, 1, 1)
+  const masterPieceGeometry = new THREE.BoxBufferGeometry(5, 1, 1, 1, 1, 1)
   const masterPieceMaterial = new THREE.ShaderMaterial({
     vertexShader: masterPieceParticlesVertex,
     fragmentShader: masterPieceParticlesFragment,
@@ -106,7 +106,7 @@ export default (e) => {
     uniforms: {
       uTime: { value: 0 },
       uBeat: { value: 0.5 },
-      uMood: { value: new THREE.Vector3(1, 1, 1) },
+      uMood: { value: new THREE.Vector3(1, 2, 1) },
       uResolution: {
         value: new THREE.Vector2(window.innerWidth, window.innerHeight),
       },
