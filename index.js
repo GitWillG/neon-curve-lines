@@ -235,6 +235,10 @@ export default (e) => {
   sphere.rotation.y = Math.PI
   sphere.updateMatrixWorld()
 
+
+
+
+  // dont need
   // app.add(sphere)
 
   // drag and dropping audio file
@@ -345,6 +349,11 @@ export default (e) => {
     }
     return points
   }
+
+
+
+
+  // curve mats
   const curveMat = new THREE.ShaderMaterial({
     vertexShader: sphereVertex,
     fragmentShader: sphereFragment,
@@ -411,6 +420,18 @@ export default (e) => {
       // uSize: { value: 4 * gl.getPixelRatio() },
     },
   })
+
+
+
+
+
+
+
+
+
+
+
+  // Curves
   for (let i = 0; i < 100; i++) {
     const path = new THREE.CatmullRomCurve3(
       getCurve(
@@ -544,19 +565,6 @@ export default (e) => {
         masterPiece.material.uniforms.uBeat.value = beatFactor1
         curveMat.uniforms.uBeat.value += beatFactor1
 
-        // if (rotationAnimation) {
-        //   if (masterPiece.rotation.x - lastRotationNumber >= Math.PI / 2) {
-        //     rotationAnimation = false
-        //     lastRotationNumber = masterPiece.rotation.x
-        //   } else {
-        //     masterPiece.rotation.x += beatFactor1 / 100
-        //     masterPiece.updateMatrixWorld()
-        //   }
-        // }
-        // if (beatFactor1 >= 0.5) {
-        //   rotationAnimation = true
-        // }
-        // masterPiece.rotation.x += beatFactor1/10
         masterPiece.updateMatrixWorld()
       }
 
@@ -571,33 +579,7 @@ export default (e) => {
           pulseAnimation = true
         }
       }
-      // if (beatFactor2) {
-      //   cloudMaterial2.color = new THREE.Color(
-      //     (moodChangerColor[1] + beatFactor2 / 22) / 5,
-      //     (moodChangerColor[0] + beatFactor2 / 30) / 5,
-      //     (moodChangerColor[2] + beatFactor2 / 30) / 5
-      //   )
-      // }
-      // if (beatFactor3) {
-      //   cloudMaterial3.color = new THREE.Color(
-      //     (moodChangerColor[0] - beatFactor3 / 30) / 5,
-      //     (moodChangerColor[1] + beatFactor3 / 25) / 5,
-      //     (moodChangerColor[2] + beatFactor3 / 30) / 5
-      //   )
-      // }
-      // if (beatFactor4) {
-      //   cloudMaterial4.color = new THREE.Color(
-      //     (moodChangerColor[0] - beatFactor4 / 30) / 5,
-      //     (moodChangerColor[1] + beatFactor4 / 24) / 5,
-      //     (moodChangerColor[2] + beatFactor4 / 32) / 5
-      //   )
-      // }
 
-      // updateClouds(cloudParticles2, 0.0004, beatFactor2)
-      // updateClouds(cloudParticles3, 0.00025, beatFactor3)
-      // updateClouds(cloudParticles4, -0.0003, beatFactor4)
-      // directionalLight.color = new THREE.Color(...moodChangerColor)
-      // console.log(moodChanger)
 
       beatFactor1 = audio.getFrequenciesByRange({
         horizontalRangeStart: 40,
