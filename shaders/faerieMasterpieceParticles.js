@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-const masterPieceParticlesVertex = `
+const faerieMasterpieceParticlesVertex = `
       ${THREE.ShaderChunk.common}
       varying vec2 vUv;
       varying vec3 vPattern;
@@ -61,7 +61,7 @@ void main() {
 }
     `
 
-const masterPieceParticlesFragment = `
+const faerieMasterpieceParticlesFragment = `
   precision highp float;
   precision highp int;
   #define PI 3.1415926535897932384626433832795
@@ -90,4 +90,4 @@ const masterPieceParticlesFragment = `
   }
 `
 
-export { masterPieceParticlesVertex, masterPieceParticlesFragment }
+export { faerieMasterpieceParticlesVertex, faerieMasterpieceParticlesFragment }
