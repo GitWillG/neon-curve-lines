@@ -423,7 +423,7 @@ export default (e) => {
     )
     const curveGeo = new THREE.TubeBufferGeometry(path, 50, 0.002, 8, false)
     const curve = new THREE.Mesh(curveGeo, curveMat)
-    curve.scale.set(8, 8, 8)
+    curve.scale.set(2, 80, 80)
     curve.updateMatrixWorld()
     app.add(curve)
   }
@@ -439,7 +439,7 @@ export default (e) => {
     )
     const curveGeo = new THREE.TubeBufferGeometry(path, 50, 0.001, 8, false)
     const curve = new THREE.Mesh(curveGeo, curveMat1)
-    curve.scale.set(10, 10, 10)
+    curve.scale.set(2, 100, 100)
     curve.updateMatrixWorld()
     app.add(curve)
   }
@@ -455,7 +455,7 @@ export default (e) => {
     )
     const curveGeo = new THREE.TubeBufferGeometry(path, 50, 0.001, 8, false)
     const curve = new THREE.Mesh(curveGeo, curveMat2)
-    curve.scale.set(2, 7, 70)
+    curve.scale.set(2, 70, 70)
     curve.updateMatrixWorld()
     app.add(curve)
   }
