@@ -40,6 +40,7 @@ let beatFactor2
 let beatFactor3
 let beatFactor4
 let elapsedTime
+
 let pulseAnimation = false
 let pulseNumber = 1
 let pulseNumber2 = 1
