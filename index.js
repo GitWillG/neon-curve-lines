@@ -455,7 +455,7 @@ export default (e) => {
     )
     const curveGeo = new THREE.TubeBufferGeometry(path, 50, 0.001, 8, false)
     const curve = new THREE.Mesh(curveGeo, curveMat2)
-    curve.scale.set(7, 7, 7)
+    curve.scale.set(2, 7, 70)
     curve.updateMatrixWorld()
     app.add(curve)
   }
