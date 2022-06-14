@@ -9,9 +9,9 @@ import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js'
 import SpatialAudio from './audio/index.js'
 
 import {
-  masterPieceParticlesFragment,
-  masterPieceParticlesVertex,
-} from './shaders/masterPieceParticles.js'
+  faerieMasterpieceParticlesFragment,
+  faerieMasterpieceParticlesVertex,
+} from './shaders/faerieMasterpieceParticles.js'
 import {
   roomFragment,
   roomVertex,
@@ -93,10 +93,10 @@ export default (e) => {
       texture.dispose()
     })
 
-  const masterPieceGeometry = new THREE.BoxBufferGeometry(6, 6, 6, 5, 5, 5)
-  const masterPieceMaterial = new THREE.ShaderMaterial({
-    vertexShader: masterPieceParticlesVertex,
-    fragmentShader: masterPieceParticlesFragment,
+  const faerieMasterpieceGeometry = new THREE.BoxBufferGeometry(6, 6, 6, 5, 5, 5)
+  const faerieMasterpieceMaterial = new THREE.ShaderMaterial({
+    vertexShader: faerieMasterpieceParticlesVertex,
+    fragmentShader: faerieMasterpieceParticlesFragment,
     depthWrite: false,
     blending: THREE.AdditiveBlending,
     vertexColors: true,
@@ -115,18 +115,18 @@ export default (e) => {
     },
   })
 
-  const masterPiece = new THREE.Points(masterPieceGeometry, masterPieceMaterial)
+  const faerieMasterpiece = new THREE.Points(faerieMasterpieceGeometry, faerieMasterpieceMaterial)
   // const wireframe = new THREE.LineSegments(
-  //   masterPieceGeometry,
-  //   masterPieceMaterial
+  //   faerieMasterpieceGeometry,
+  //   faerieMasterpieceMaterial
   // )
-  // masterPiece.add(wireframe)
-  masterPiece.scale.set(0.99, 0.99, 0.99)
-  masterPiece.position.set(0, 1, 0)
-  masterPiece.rotation.x = Math.PI / 2
-  masterPiece.updateMatrixWorld()
+  // faerieMasterpiece.add(wireframe)
+  faerieMasterpiece.scale.set(0.99, 0.99, 0.99)
+  faerieMasterpiece.position.set(0, 1, 0)
+  faerieMasterpiece.rotation.x = Math.PI / 2
+  faerieMasterpiece.updateMatrixWorld()
 
-  app.add(masterPiece)
+  app.add(faerieMasterpiece)
 
   // const roomGeometry = new THREE.BoxBufferGeometry(30, 5, 5, 100, 100, 100)
   const roomGeometry = new THREE.PlaneBufferGeometry(6, 6, 500, 500)
@@ -498,7 +498,7 @@ export default (e) => {
       const threshold = audio.getThreshold()
       audio.updateMoodArray()
       audio.logMood()
-      masterPiece.material.uniforms.uTime.value = elapsedTime
+      faerieMasterpiece.material.uniforms.uTime.value = elapsedTime
       room.material.uniforms.uTime.value = elapsedTime * 10
       sphere.material.uniforms.uTime.value = elapsedTime * 10
       curveMat.uniforms.uTime.value = elapsedTime
@@ -530,7 +530,7 @@ export default (e) => {
         moodChanger + 0.1,
         0.3 + moodChanger / 10,
       ]
-      masterPiece.material.uniforms.uMood.value = new THREE.Vector3(
+      faerieMasterpiece.material.uniforms.uMood.value = new THREE.Vector3(
         ...moodChangerColor1
       )
       room.material.uniforms.uMood.value = new THREE.Vector3(
@@ -562,10 +562,10 @@ export default (e) => {
       if (beatFactor1) {
         room.material.uniforms.uBeat.value = beatFactor1
         sphere.material.uniforms.uBeat.value = beatFactor1
-        masterPiece.material.uniforms.uBeat.value = beatFactor1
+        faerieMasterpiece.material.uniforms.uBeat.value = beatFactor1
         curveMat.uniforms.uBeat.value += beatFactor1
 
-        masterPiece.updateMatrixWorld()
+        faerieMasterpiece.updateMatrixWorld()
       }
 
       if (beatFactor2) {
