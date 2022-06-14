@@ -201,7 +201,7 @@ export default (e) => {
     roomWireframeMaterial
   )
   // wireframe.scale.set(0.999, 0.999, 0.999)
-  wireframe.position.set(10, 2.5, 0)
+  wireframe.position.set(-2, 2.5, 15)
   wireframe.updateMatrixWorld()
   // room.add(wireframe)
   // app.add(room)
