@@ -186,7 +186,7 @@ export default (e) => {
   // room.rotation.z += Math.PI / 2
   // room.rotation.x += Math.PI / 4
   // room.rotation.y += Math.PI / 4
-  room.position.set(0, 1, -3)
+  room.position.set(0, 2.5, -3)
   room.updateMatrixWorld()
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(100, 100),
@@ -201,7 +201,7 @@ export default (e) => {
     roomWireframeMaterial
   )
   // wireframe.scale.set(0.999, 0.999, 0.999)
-  wireframe.position.set(0, 2.5, 0)
+  wireframe.position.set(10, 2.5, 0)
   wireframe.updateMatrixWorld()
   // room.add(wireframe)
   // app.add(room)
@@ -231,7 +231,7 @@ export default (e) => {
       },
     })
   )
-  sphere.position.set(2, 2, 0)
+  sphere.position.set(7, 2, 0)
   sphere.rotation.y = Math.PI
   sphere.updateMatrixWorld()
 
