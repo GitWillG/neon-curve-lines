@@ -201,7 +201,7 @@ export default (e) => {
     roomWireframeMaterial
   )
   // wireframe.scale.set(0.999, 0.999, 0.999)
-  wireframe.position.set(-2, 2.5, 15)
+  wireframe.position.set(0, 2.5, 0)
   wireframe.updateMatrixWorld()
   // room.add(wireframe)
   // app.add(room)
@@ -231,7 +231,7 @@ export default (e) => {
       },
     })
   )
-  sphere.position.set(7, 2, 0)
+  sphere.position.set(1, 2, 20)
   sphere.rotation.y = Math.PI
   sphere.updateMatrixWorld()
 
