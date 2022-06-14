@@ -121,9 +121,9 @@ export default (e) => {
   //   masterPieceMaterial
   // )
   // masterPiece.add(wireframe)
-  masterPiece.scale.set(0.99, 0.99, 0.99)
+  masterPiece.scale.set(0.4, 0.99, 0.4)
   masterPiece.position.set(0, 2.5, 0)
-  masterPiece.rotation.x = Math.PI / 2
+  masterPiece.rotation.x = Math.PI
   masterPiece.updateMatrixWorld()
 
   app.add(masterPiece)
